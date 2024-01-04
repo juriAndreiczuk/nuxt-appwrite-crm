@@ -13,8 +13,12 @@ export default defineNuxtConfig({
           Lato: [100, 300],
         }
       }
-    ]
+    ],
+    '@pinia/nuxt'
   ],
+  pinia: {
+    storesDirs: ['./store/**']
+  },
   shadcn: {
     prefix: '',
     componentDir: './components/ui'

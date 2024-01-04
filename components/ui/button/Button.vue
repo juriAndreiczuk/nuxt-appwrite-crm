@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Primitive, PrimitiveProps } from 'radix-vue';
+import { Primitive } from 'radix-vue';
+import type { PrimitiveProps } from 'radix-vue';
 import { buttonVariants } from '.';
 import { cn } from '@/utils';
 
