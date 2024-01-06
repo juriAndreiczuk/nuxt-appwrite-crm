@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { ICard, IColumn } from '@/components/kanban/kanban.types'
   import { useKanbanQuery } from '@/components/kanban/useKanbanQuery'
-import dayjs from 'dayjs';
+  import dayjs from 'dayjs'
 
   useHead({
     title: 'Home'
@@ -25,6 +25,10 @@ import dayjs from 'dayjs';
         >
           <div class="py-2 px-5 mb-2 text-center">
             <p class="mb-3 font-light text-lg">{{ col.name }}</p>
+            <KanbanCreateDeal
+              :refetch="refetch"
+              :status="col.id"
+            />
             <Card
               v-for="item of col.items"
               :key="item.id"

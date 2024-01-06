@@ -1,6 +1,6 @@
 import {v4 as uuid} from 'uuid'
 
-export const autentification = () => {
+export const useAutentification = () => {
   const email = ref('')
   const password = ref('')
   const name = ref('')

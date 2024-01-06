@@ -8,8 +8,8 @@ export const KANBAN_DATA:IColumn[] = [
     items: []
   },
   {
-    id: EnumStatus['to-be-agread'],
-    name: 'to be agread',
+    id: EnumStatus['to-be-agreed'],
+    name: 'to be agreed',
     items: []
   },
   {

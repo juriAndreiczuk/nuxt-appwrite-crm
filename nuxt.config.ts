@@ -14,7 +14,13 @@ export default defineNuxtConfig({
         }
       }
     ],
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    [
+      '@vee-validate/nuxt',
+      {
+        autoImports: true
+      }
+    ]
   ],
   pinia: {
     storesDirs: ['./store/**']

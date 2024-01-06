@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { autentification } from '@/components/login/authentication'
-  const { email, password, name, login, register } = autentification()
+  import { useAutentification } from '~/components/login/useAuthentication'
+  const { email, password, name, login, register } = useAutentification()
   useHead({
     title: 'Login'
   })
@@ -34,4 +34,4 @@
     </div>
   </div>
 </template>
-~/components/login/authentication
+~/components/login/authentication~/components/login/useAuthentication
