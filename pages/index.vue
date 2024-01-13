@@ -11,7 +11,7 @@
 
   const dragCard = ref<ICard | null>(null)
   const sourceColumn = ref<IColumn | null>(null)
-  const {data, isLoading, refetch} = useKanbanQuery()
+  const { data, isLoading, refetch } = useKanbanQuery()
 
   type TypeMutationVariables = {
     docId: string
@@ -20,7 +20,7 @@
 
   const { mutate } = useMutation({
     mutationKey: ['move card'],
-    mutationFn: ({docId, Status}: TypeMutationVariables) =>
+    mutationFn: ({ docId, Status }: TypeMutationVariables) =>
       DB.updateDocument(DB_ID, COLLECTION_DEALS, docId, {
         Status
       }),
