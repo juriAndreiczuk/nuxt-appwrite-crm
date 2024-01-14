@@ -4,6 +4,7 @@
   import { useMutation } from '@tanstack/vue-query'
   import dayjs from 'dayjs'
   import { EnumStatus } from '@/types/deals.types'
+  import { useDealStore } from '@/store/deal.store'
 
   useHead({
     title: 'Home'
@@ -12,6 +13,7 @@
   const dragCard = ref<ICard | null>(null)
   const sourceColumn = ref<IColumn | null>(null)
   const { data, isLoading, refetch } = useKanbanQuery()
+  const dealStore = useDealStore()
 
   type TypeMutationVariables = {
     docId: string
@@ -70,11 +72,18 @@
                 <CardDescription>{{ convertCurrency(500) }}</CardDescription>
               </CardHeader>
               <CardContent>{{ item.companyName  }}</CardContent>
-              <CardFooter>{{  dayjs(item.$createAt).format('DD.MM.YYYY')  }}</CardFooter>
+              <CardFooter class="flex flex-col">
+                <div>{{  dayjs(item.$createAt).format('DD.MM.YYYY')  }}</div>
+                <Button
+                  @click="dealStore.set(item)"
+                  class="block w-full text-sm mt-3"
+                >Show info</Button>
+              </CardFooter>
             </Card>
           </div>
         </div>
       </div>
     </div>
+    <KanbanComments v-if="dealStore.isOpen" />
   </div>
 </template>
