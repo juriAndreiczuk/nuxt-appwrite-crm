@@ -3,7 +3,7 @@
   import { useCommentCreate } from './useCommentCreate'
   import { useCardInfo } from './useCardInfo'
   import { useDealStore } from '@/store/deal.store'
-  const { data, refetch, isLoading} = useCardInfo()
+  const { data, refetch } = useCardInfo()
   const { comment, wtiteComment } = useCommentCreate({ refetch })
   
   const dealStore = useDealStore()
@@ -31,4 +31,4 @@
       </div>
      </div>
   </div>
-</template> 
+</template>

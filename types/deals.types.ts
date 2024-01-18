@@ -3,8 +3,8 @@ export interface IBaseField {
   $id: string
 }
 
-export interface Icustomer extends IBaseField {
-  name: string
+export interface ICustomer extends IBaseField {
+  Name: string
   email: string
   avatar_url: string
   from_source?: string
@@ -24,7 +24,7 @@ export enum EnumStatus {
 
 export interface IDeal extends IBaseField {
   comments: IComment[]
-  customers: Icustomer
+  customers: ICustomer
   name: string
   price: number
   status: EnumStatus
