@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { ICard, IColumn } from '@/components/kanban/kanban.types'
+  import type { ICard, IColumn } from '@/types/kanban.types'
   import { useKanbanQuery } from '@/components/kanban/useKanbanQuery'
   import { useMutation } from '@tanstack/vue-query'
   import dayjs from 'dayjs'
